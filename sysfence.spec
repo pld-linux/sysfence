@@ -1,12 +1,12 @@
 Summary:	System resource guard
 Summary(pl):	Stra¿nik zasobów systemowych
 Name:		sysfence
-Version:	0.1
+Version:	0.2
 Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	4fc338c0b94c658d6d63b6f91b762b88
+Source0:	http://osdn.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	203a7ed38e7ad17c125a4e166c98121c
 URL:		http://sysfence.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,21 +32,17 @@ momentach lub po prostu do zabijania niebezpiecznych procesów.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# create directories if necessary
-install -d $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_datadir}/doc/%{name}-%{version}
-install -m 0755 sysfence-* $RPM_BUILD_ROOT%{_bindir}
-install -m 0644 README $RPM_BUILD_ROOT%{_datadir}/doc/%{name}-%{version}
-
-#%{__make} install \
-#	DESTDIR=$RPM_BUILD_ROOT
+# 0.2 has a bug in Makefile
+install -d $RPM_BUILD_ROOT%{_datadir}/doc/%{name}
+%{__make} install \
+    DESTDIR=$RPM_BUILD_ROOT PREFIX=/usr
+mv -f $RPM_BUILD_ROOT%{_datadir}/doc/%{name} $RPM_BUILD_ROOT%{_datadir}/doc/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README
+%doc %{_datadir}/doc/%{name}-%{version}/README
 %attr(755,root,root) %{_bindir}/*
 #%{_datadir}/%{name}
