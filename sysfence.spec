@@ -1,12 +1,12 @@
 Summary:	System resource guard
 Summary(pl):	Stra¿nik zasobów systemowych
 Name:		sysfence
-Version:	0.8
+Version:	0.10
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://osdn.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	09deda7980613f83f440d710708112e9
+# Source0-md5:	242a429b02722e472b1f2073b3574fb8
 URL:		http://sysfence.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
