@@ -1,28 +1,29 @@
 Summary:	System resource guard
 Summary(pl):	Stra¿nik zasobów systemowych
 Name:		sysfence
-Version:	0.11
+Version:	0.12
 Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	c3abd43d5bac72746bd9e5d600d083be
+Source0:	http://osdn.dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	5600b67cc097b30fc147df5882acac1e
 URL:		http://sysfence.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Sysfence is a Linux system resource monitoring tool. It checks
-resource levels (load average, memory, swap, etc.) and makes action if
-specified thresholds have been exceeded. It can be used for alerting
-admins, dumping system stats in critical moments, or just killing
-dangerous processes.
+resource levels (load average, memory, swap, filesystem space, etc.)
+and makes action if specified thresholds have been exceeded. It can
+be used for alerting admins, dumping system stats in critical moments,
+or just killing dangerous processes.
 
 %description -l pl
 Sysfence to narzêdzie monitoruj±ce zasoby systemowe Linuksa. Sprawdza
-stan zasobów (load average, pamiêæ, swap, itp.) i podejmuje akcjê gdy
-zostan± przekroczone ustalone warto¶ci. Mo¿e byæ u¿yty do alarmowania
-administratorów, zapisywania informacji o stanie systemu w krytycznych
-momentach lub po prostu do zabijania niebezpiecznych procesów.
+stan zasobów (load average, pamiêæ, swap, ilo¶æ miejsca w systemie
+plików, itp.) i podejmuje akcjê gdy zostan± przekroczone ustalone
+warto¶ci. Mo¿e byæ u¿yty do alarmowania administratorów, zapisywania
+informacji o stanie systemu w krytycznych momentach lub po prostu do
+zabijania niebezpiecznych procesów.
 
 %prep
 %setup -q
