@@ -5,7 +5,7 @@ Version:	0.15
 Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://osdn.dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/sysfence/%{name}-%{version}.tar.gz
 # Source0-md5:	9924311a4c83a99d3aa3b45db2419867
 URL:		http://sysfence.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
