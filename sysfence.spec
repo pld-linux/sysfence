@@ -1,12 +1,12 @@
 Summary:	System resource guard
 Summary(pl):	Stra¿nik zasobów systemowych
 Name:		sysfence
-Version:	0.4
+Version:	0.5
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://osdn.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	21edd2589fca546b074ac3255f5deb0a
+# Source0-md5:	ff9ff8491de5c1bc3bc7ca567b7faccf
 URL:		http://sysfence.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,7 +33,7 @@ momentach lub po prostu do zabijania niebezpiecznych procesów.
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
-    DESTDIR=$RPM_BUILD_ROOT PREFIX=/usr
+DESTDIR=$RPM_BUILD_ROOT PREFIX=%{_prefix}
 mv -f $RPM_BUILD_ROOT%{_datadir}/doc/%{name} $RPM_BUILD_ROOT%{_datadir}/doc/%{name}-%{version}
 
 %clean
@@ -42,4 +42,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc %{_datadir}/doc/%{name}-%{version}/README
+%doc %{_datadir}/doc/%{name}-%{version}/example.conf
 %attr(755,root,root) %{_bindir}/*
