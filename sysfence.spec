@@ -13,9 +13,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Sysfence is a Linux system resource monitoring tool. It checks
 resource levels (load average, memory, swap, filesystem space, etc.)
-and makes action if specified thresholds have been exceeded. It can
-be used for alerting admins, dumping system stats in critical moments,
-or just killing dangerous processes.
+and makes action if specified thresholds have been exceeded. It can be
+used for alerting admins, dumping system stats in critical moments, or
+just killing dangerous processes.
 
 %description -l pl
 Sysfence to narzêdzie monitoruj±ce zasoby systemowe Linuksa. Sprawdza
@@ -47,6 +47,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_datadir}/doc/%{name}-%{version}/README
-%doc %{_datadir}/doc/%{name}-%{version}/example.conf
+%doc %{_docdir}/%{name}-%{version}
 %attr(755,root,root) %{_bindir}/*
