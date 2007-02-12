@@ -1,5 +1,5 @@
 Summary:	System resource guard
-Summary(pl):	Stra¿nik zasobów systemowych
+Summary(pl.UTF-8):   StraÅ¼nik zasobÃ³w systemowych
 Name:		sysfence
 Version:	0.16
 Release:	1
@@ -17,13 +17,13 @@ and makes action if specified thresholds have been exceeded. It can be
 used for alerting admins, dumping system stats in critical moments, or
 just killing dangerous processes.
 
-%description -l pl
-Sysfence to narzêdzie monitoruj±ce zasoby systemowe Linuksa. Sprawdza
-stan zasobów (load average, pamiêæ, swap, ilo¶æ miejsca w systemie
-plików, itp.) i podejmuje akcjê gdy zostan± przekroczone ustalone
-warto¶ci. Mo¿e byæ u¿yty do alarmowania administratorów, zapisywania
+%description -l pl.UTF-8
+Sysfence to narzÄ™dzie monitorujÄ…ce zasoby systemowe Linuksa. Sprawdza
+stan zasobÃ³w (load average, pamiÄ™Ä‡, swap, iloÅ›Ä‡ miejsca w systemie
+plikÃ³w, itp.) i podejmuje akcjÄ™ gdy zostanÄ… przekroczone ustalone
+wartoÅ›ci. MoÅ¼e byÄ‡ uÅ¼yty do alarmowania administratorÃ³w, zapisywania
 informacji o stanie systemu w krytycznych momentach lub po prostu do
-zabijania niebezpiecznych procesów.
+zabijania niebezpiecznych procesÃ³w.
 
 %prep
 %setup -q
