@@ -1,3 +1,7 @@
+# TODO:
+# - init script
+# - some sane default configuration
+
 Summary:	System resource guard
 Summary(pl.UTF-8):	Strażnik zasobów systemowych
 Name:		sysfence
