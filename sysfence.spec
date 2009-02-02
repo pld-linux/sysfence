@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Strażnik zasobów systemowych
 Name:		sysfence
 Version:	0.16
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/sysfence/%{name}-%{version}.tar.gz
 # Source0-md5:	72027d4cea47dade2715540f19f0e077
@@ -47,5 +47,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_docdir}/%{name}-%{version}
+%doc parseopt/grammar.txt CREDITS README TODO doc/example.conf
 %attr(755,root,root) %{_bindir}/*
